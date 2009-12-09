@@ -1,3 +1,6 @@
+require 'thinking_sphinx'
+require 'thinking_sphinx/xml'
+
 namespace :thinking_sphinx do
   # http://www.sphinxsearch.com/docs/current.html#xmlpipe2
   desc "Streams XML data to STDOUT"

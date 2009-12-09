@@ -14,7 +14,12 @@ In your @environment.rb@ file, with the rest of your gem dependencies:
 
 And add the following line to the bottom of your @Rakefile@:
 
-<pre><code>require 'thinking_sphinx/xml/tasks'</code></pre>
+<pre><code>begin
+    require 'thinking_sphinx/tasks'
+    require 'thinking_sphinx/xml/tasks'
+  rescue LoadError
+    puts "Cannot load thinking sphinx tasks"
+  end</code></pre>
 
 h2. Usage
 
