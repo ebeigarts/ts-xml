@@ -1,4 +1,4 @@
-h1. Datetime Deltas for Thinking Sphinx
+h1. Support for Oracle, SQLite3 using xmlpipe2 for Thinking Sphinx
 
 h2. Installation
 
