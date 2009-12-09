@@ -2,7 +2,7 @@ h1. Support for Oracle, SQLite3 using xmlpipe2 for Thinking Sphinx
 
 h2. Installation
 
-You'll need Thinking Sphinx 1.3.0 or later.
+You'll need Thinking Sphinx 1.3.8 or later.
 
 <pre><code>gem install ts-xml --source http://gemcutter.org</code></pre>
 
@@ -12,7 +12,7 @@ In your @environment.rb@ file, with the rest of your gem dependencies:
   :lib     => 'thinking_sphinx/xml'
   :source  => 'http://gemcutter.org'</code></pre>
 
-And add the following line to the bottom of your @Rakefile@:
+And add the following lines to the bottom of your @Rakefile@:
 
 <pre><code>begin
   require 'thinking_sphinx/tasks'
