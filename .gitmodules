@@ -1,0 +1,3 @@
+[submodule "vendor/thinking_sphinx"]
+	path = vendor/thinking_sphinx
+	url = git://github.com/freelancing-god/thinking-sphinx.git

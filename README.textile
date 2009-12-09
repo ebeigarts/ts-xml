@@ -1,0 +1,25 @@
+h1. Datetime Deltas for Thinking Sphinx
+
+h2. Installation
+
+You'll need Thinking Sphinx 1.3.0 or later.
+
+<pre><code>gem install ts-xml --source http://gemcutter.org</code></pre>
+
+In your @environment.rb@ file, with the rest of your gem dependencies:
+
+<pre><code>config.gem 'ts-xml',
+  :lib     => 'thinking_sphinx/xml'
+  :source  => 'http://gemcutter.org'</code></pre>
+
+And add the following line to the bottom of your @Rakefile@:
+
+<pre><code>require 'thinking_sphinx/xml/tasks'</code></pre>
+
+h2. Usage
+
+TODO
+
+h2. Copyright
+
+Copyright (c) 2009 Edgars Beigarts, and released under an MIT Licence.
