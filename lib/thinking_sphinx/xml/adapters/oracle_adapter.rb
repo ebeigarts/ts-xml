@@ -21,8 +21,12 @@ module ThinkingSphinx
       "TO_CHAR(#{clause})"
     end
     
+    # Works the same way as described here:
+    # http://github.com/freelancing-god/thinking-sphinx/issues#issue/13
+    #
+    # With oracle_enhanced you can specify "time_zone" in database.yml
     def cast_to_datetime(clause)
-      "(TO_DATE(TO_CHAR(#{clause}, 'YYYY-MON-DD HH24.MI.SS'), 'YYYY-MON-DD HH24.MI.SS') - TO_DATE('01-JAN-1970','DD-MON-YYYY')) * (86400)"
+      "((SYSDATE + (#{clause} - timestamp '1970-01-01 00:00:00 +00:00') - SYSDATE) * 86400)"
     end
     
     def cast_to_unsigned(clause)
@@ -39,7 +43,6 @@ module ThinkingSphinx
       value ? '1' : '0'
     end
     
-    # TODO
     def crc(clause, blank_to_null = false)
       "CRC32(#{clause})"
     end
