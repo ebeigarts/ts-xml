@@ -1,16 +1,8 @@
 $:.unshift File.dirname(__FILE__) + '/../lib'
-Dir[File.join(File.dirname(__FILE__), '/../vendor/*/lib')].each do |path|
-  $:.unshift path
-end
+$:.unshift File.dirname(__FILE__) + '/../vendor/thinking_sphinx/lib'
 
 require 'spec/rake/spectask'
 require 'cucumber/rake/task'
-
-require 'thinking_sphinx'
-require 'thinking_sphinx/xml'
-
-ThinkingSphinx::MysqlAdapter.new(nil)
-ThinkingSphinx::SQLite3Adapter.new(nil)
 
 namespace :features do
   def add_task(name, description)

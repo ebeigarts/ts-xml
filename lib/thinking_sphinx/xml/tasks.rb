@@ -1,10 +1,9 @@
-require 'thinking_sphinx'
-require 'thinking_sphinx/xml'
-
 namespace :thinking_sphinx do
   # http://www.sphinxsearch.com/docs/current.html#xmlpipe2
   desc "Streams XML data to STDOUT"
   task :xml => :app_env do
+    require 'thinking_sphinx'
+    require 'thinking_sphinx/xml'
     # ThinkingSphinx::Configuration.instance.load_models
     source_name = ENV["NAME"]
     # STDERR.puts "Source name: #{source_name}"
