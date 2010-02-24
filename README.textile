@@ -1,16 +1,16 @@
-h1. Support for Oracle, SQLite3 using xmlpipe2 for Thinking Sphinx
+h1. Thinking Sphinx plugin for xmlpipe2 data sources
+
+Supports Oracle 10g, MySQL and SQLite3.
 
 h2. Installation
 
 You'll need Thinking Sphinx 1.3.8 or later.
 
-<pre><code>gem install ts-xml --source http://gemcutter.org</code></pre>
+<pre><code>gem install ts-xml</code></pre>
 
 In your @environment.rb@ file, with the rest of your gem dependencies:
 
-<pre><code>config.gem 'ts-xml',
-  :lib     => 'thinking_sphinx/xml'
-  :source  => 'http://gemcutter.org'</code></pre>
+<pre><code>config.gem 'ts-xml', :lib => 'thinking_sphinx/xml'</code></pre>
 
 And add the following lines to the bottom of your @Rakefile@:
 
@@ -23,8 +23,8 @@ end</code></pre>
 
 h2. Usage
 
-TODO
+Just add those lines and it will use xmlpipe2 data source instead of SQL data source.
 
 h2. Copyright
 
-Copyright (c) 2009 Edgars Beigarts, and released under an MIT Licence.
+Copyright (c) 2010 Edgars Beigarts, and released under an MIT Licence.
