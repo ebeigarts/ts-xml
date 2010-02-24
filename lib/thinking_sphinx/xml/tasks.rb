@@ -1,7 +1,16 @@
 namespace :thinking_sphinx do
   # http://www.sphinxsearch.com/docs/current.html#xmlpipe2
   desc "Streams XML data to STDOUT"
-  task :xml => :app_env do
+  task :xml do
+    # Load app environment.
+    # Redirect STDOUT ("**Erubis 2.6.5" etc) to STDERR.
+    begin
+      _stdout = STDOUT.clone
+      STDOUT.reopen(STDERR)
+      Rake::Task["thinking_sphinx:app_env"].invoke
+    ensure
+      STDOUT.reopen(_stdout)
+    end
     require 'thinking_sphinx'
     require 'thinking_sphinx/xml'
     # ThinkingSphinx::Configuration.instance.load_models
