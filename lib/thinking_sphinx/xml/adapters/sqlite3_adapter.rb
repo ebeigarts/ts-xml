@@ -22,7 +22,7 @@ module ThinkingSphinx
     end
     
     def cast_to_datetime(clause)
-      "STRFTIME('%s', #{clause})"
+      "STRFTIME('%s', #{clause}, 'utc')"
     end
     
     def cast_to_unsigned(clause)
