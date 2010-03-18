@@ -4,3 +4,4 @@ database.yml
 .yardoc
 doc
 *.tmproj
+sqlnet.log

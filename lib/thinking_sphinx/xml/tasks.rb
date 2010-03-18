@@ -11,7 +11,6 @@ namespace :thinking_sphinx do
     ensure
       STDOUT.reopen(_stdout)
     end
-    require 'thinking_sphinx'
     require 'thinking_sphinx/xml'
     # ThinkingSphinx::Configuration.instance.load_models
     source_name = ENV["NAME"]

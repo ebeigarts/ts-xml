@@ -1,0 +1,11 @@
+# Default
+username: root
+host: localhost
+password: 
+
+# # Oracle
+# adapter: oracle_enhanced
+# database: XE
+# username: hr
+# password: hr
+# nls_length_semantics: BYTE

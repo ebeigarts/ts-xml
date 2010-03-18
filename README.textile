@@ -27,6 +27,10 @@ h2. Usage
 
 Just add those lines and it will use xmlpipe2 data source instead of SQL data source.
 
+h2. Limitations
+
+Oracle CLOB data types are not supported and indexed fields are trimmed to 4000 bytes.
+
 h2. Copyright
 
 Copyright (c) 2010 Edgars Beigarts, and released under an MIT Licence.

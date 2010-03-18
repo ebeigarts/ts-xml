@@ -7,7 +7,7 @@ require 'cucumber/rake/task'
 namespace :features do
   def add_task(name, description)
     Cucumber::Rake::Task.new(name, description) do |t|
-      t.cucumber_opts = "-r spec/cucumber_env.rb -r features/step_definitions --format pretty DATABASE=#{name}"
+      t.cucumber_opts = "-r features_ext/support/env.rb -r features/step_definitions --format pretty DATABASE=#{name}"
     end
   end
   
@@ -22,11 +22,11 @@ namespace :thinking_sphinx do
   task :app_env do
     # Establish DB connection
     if ENV['DATABASE']
-      require "thinking_sphinx"
       require "thinking_sphinx/xml"
       require "cucumber"
       require "cucumber/thinking_sphinx/internal_world"
       world = Cucumber::ThinkingSphinx::InternalWorld.new
+      world.database_file = 'features_ext/support/database.yml'
       world.configure_database
       world.send(:load_files, world.send(:models_directory))
     end
