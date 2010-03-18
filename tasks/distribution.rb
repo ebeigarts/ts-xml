@@ -5,8 +5,8 @@ YARD::Rake::YardocTask.new
 
 Jeweler::Tasks.new do |gem|
   gem.name        = 'ts-xml'
-  gem.summary     = 'Thinking Sphinx - XML'
-  gem.description = 'Support for Oracle, SQLite3 using xmlpipe2 for Thinking Sphinx'
+  gem.summary     = 'Thinking Sphinx + XML'
+  gem.description = 'Thinking Sphinx plugin for xmlpipe2 data sources (Oracle, SQLite3, ...)'
   gem.email       = "1@wb4.lv"
   gem.homepage    = "http://github.com/ebeigarts/ts-xml"
   gem.authors     = ["Edgars Beigarts"]
