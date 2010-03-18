@@ -14,7 +14,7 @@ module ThinkingSphinx
     end
     
     def group_concatenate(clause, separator = ' ')
-      "TO_STRING(CAST(COLLECT(TO_CHAR(#{clause})) AS SYS.ODCIVARCHAR2LIST), '#{separator}')"
+      "TO_STRING(CAST(COLLECT(DISTINCT TO_CHAR(#{clause})) AS SYS.ODCIVARCHAR2LIST), '#{separator}')"
     end
     
     def cast_to_string(clause)
