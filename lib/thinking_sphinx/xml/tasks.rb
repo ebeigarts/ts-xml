@@ -55,7 +55,7 @@ namespace :thinking_sphinx do
         # STDERR.puts attribute
         case attribute && attribute.type
         when :boolean
-          v = ['Y', 'T', '1', 1, true].include?(v) ? 1 : 0
+          v = ['Y', 'T', 't', '1', 1, true].include?(v) ? 1 : 0
         when :integer, :datetime
           v = v.to_i
         when :float
